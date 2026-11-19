@@ -1,0 +1,52 @@
+{
+    "name": "smc-certificate-manager",
+    "displayName": "SMC Gateway SSL Certificate Manager",
+    "version": "1.0.0",
+    "author": "Intaverge <support@inteverge.com> (http://www.intaverge.com)",
+    "type": "module",
+    "scripts": {},
+    "devDependencies": {
+        "eslint": "^8.57.1",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.31.0",
+        "terser": "^5.39.0"
+    },
+
+    "keywords": [
+        "smc-custom-ssl",
+        "SMC Custom SSL"
+    ],
+    "smc-custom-ssl": {
+        "packageName": ".deployments/${name}-v${version}.zip",
+        "minify": true,
+        "include": [
+            "index.html",
+            "package.json",
+            "assets/**"
+        ],
+        "exclude": [
+            "environment",
+            "_settings",
+            "DEVELOPMENT_NOTES.md",
+            "AGENTS.md",
+            ".deployments/**"
+        ],
+
+        "gateway": {
+            "version": ">=1.1.76",
+            "modules": {
+                "allOf": [
+                    "users",
+                    "webapp"
+                ],
+                "anyOf": [],
+                "optional": [
+                    "registry",
+                    "rules",
+                    "webserver",
+                    "izgizservice"
+                ]
+            }
+		}
+    }
+}
