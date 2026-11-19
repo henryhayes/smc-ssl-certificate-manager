@@ -5,9 +5,8 @@ dist/
 nbdist/
 .nb-gradle/
 _settings
-# Legacy local release artefacts created before 3.1.2. New Gateway ZIPs are
-# written to portal/public/downloads/ and ignored by portal/.gitignore.
-deployments/
+# Generated local Gateway package artefacts.
+.deployments/
 node_modules/
 .intaverge-express/docs/GATEWAY.local.md
 graphify-out/

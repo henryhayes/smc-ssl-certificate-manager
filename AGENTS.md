@@ -13,6 +13,11 @@ This application does one thing - provides a means to replace the default SSL ce
 
 Build on the skeleton app located `./` for all development, but use the `References` below.
 
+## Packaging and versioning
+
+- After every completed code change, validate the JavaScript and run `npm run package` to create the configured Gateway ZIP in `.deployments/`.
+- Do not change `package.json > version` unless the user explicitly requests a version increase. Rebuilds before that request retain the existing version number.
+
 ## References
 
 Use the following for reference:
@@ -34,5 +39,7 @@ Use the following for reference:
 - User-role test login: `user`
 - User-role test password: `testbenchuser`
 
-App Installed Browser Location: http://10.17.66.8/
+"user" may not exist, and might need creating.
+
+App Installed Browser Location: http://10.17.66.8/a/smc-ssl-certificate-manager/
 
